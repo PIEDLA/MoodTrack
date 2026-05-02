@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Estado emocional</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logoch.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/logob.png" alt="Logo MoodTrack">
+            <h1>MoodTrack</h1>
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                ☰
+            </label>
+            <ul class="menu">
+                <a href="../index.html">Inicio</a>
+                ✖
+                </label>
+            </ul>
+        </nav>
+
+
+
+
+
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 id="saludo"></h2>
+            <p>¿Cómo te sientes hoy?</p>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section id="loginForm">
+            <h2>Registrar emoción</h2>
+
+            <form>
+                <label>¿Cómo te sientes?</label>
+                <select required>
+                    <option value="">Selecciona</option>
+                    <option>Feliz</option>
+                    <option>Triste</option>
+                    <option>Estresado</option>
+                    <option>Cansado</option>
+                </select>
+
+                <label>Comentario</label>
+                <textarea required></textarea>
+
+                <label>Fecha</label>
+                <input type="date" required>
+
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h6 {
+    align-items: center;
+
+}
+
+/* VARIABLES DE COLOR */
+:root {
+    --morado-oscuro: #3D0066;
+    --morado-secundario: #510087;
+    --morado-principal: #5C0099;
+    --amarillo: #FDC500;
+    --amarillo-hover: #FFD500;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #3D0066, #5C0099);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+/* MENÚ */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+}
+
+/* EFECTO HOVER*/
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--amarillo);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* FORMULARIO */
+#registroForm {
+    background: white;
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#registroForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--morado-principal);
+}
+#loginForm {
+    background: white;
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#loginForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--morado-principal);
+}
+
+/* INPUTS */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--morado-principal);
+    box-shadow: 0 0 5px rgba(92, 0, 153, 0.3);
+}
+
+/* BOTÓN */
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(45deg, var(--amarillo), var(--amarillo-hover));
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* LISTA */
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .formulario {
+        width: 90%;
+    }
+}
+
+.logo-hero {
+    width: 180px;
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* MENÚ NORMAL */
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* BOTONES */
+.mostrar-menu,
+.esconder-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+/* OCULTAR CHECK */
+#check {
+    display: none;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+    .menu {
+        position: fixed;
+        background: #5C0099;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: -100%; /* oculto */
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+        transition: 0.5s;
+    }
+
+    .menu li {
+        margin: 20px 0;
+    }
+
+    /* MOSTRAR BOTÓN ☰ */
+    .mostrar-menu {
+        display: block;
+    }
+
+    /* MOSTRAR X */
+    .esconder-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* CUANDO SE ACTIVA */
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}

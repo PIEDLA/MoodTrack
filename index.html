@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MoodTrack</title>
+    <link rel="icon" href="img/logoch.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="img/logob.png" alt="Logo MoodTrack">
+            <h1>MoodTrack</h1>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                ☰
+            </label>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./views/login.html">Login</a></li>
+                <label for="check" class="esconder-menu">
+                    ✖
+                </label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Bienvenid@ a MoodTrack</h1>
+            <img src="img/logob.png" alt="Logo MoodTrack" class="logo-hero">
+            <h2>Registra cómo te sientes</h2>
+            <p>Una forma sencilla de entender tus emociones día a día.</p>
+        </section>
+
+        <!-- FORMULARIO DE REGISTRO -->
+        <form id="registroForm">
+            <h4>Registrate y accede a todos los beneficios</h4>
+            <label>Nombre completo</label>
+            <input type="text" required>
+
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Contraseña</label>
+            <input type="password" required minlength="6">
+
+            <label>Edad</label>
+            <input type="number" required min="10">
+
+            <label>Género</label>
+            <select required>
+                <option value="">Selecciona</option>
+                <option>Femenino</option>
+                <option>Masculino</option>
+                <option>Otro</option>
+            </select>
+
+            <button type="submit">Registrarse</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>© 2026 MoodTrack - Entrega 1</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>

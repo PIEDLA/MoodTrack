@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodTrack</title>
+    <link rel="icon" href="../img/logoch.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logob.png" alt="Logo MoodTrack">
+            <h1>MoodTrack</h1>
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                ☰
+            </label>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="login.html">Login</a></li>
+                <label for="check" class="esconder-menu">
+                    ✖
+                </label>
+            </ul>
+        </nav>
+
+
+    </header>
+    <main>
+
+        <form id="loginForm">
+            <h2>Iniciar Sesión</h2>
+
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Contraseña</label>
+            <input type="password" required minlength="6">
+
+            <button type="submit">Ingresar</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2026 MoodTrack - Entrega 1</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
