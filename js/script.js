@@ -1,3 +1,4 @@
+// FORM
 const registroForm = document.getElementById("registroForm");
 
 if (registroForm) {
@@ -53,7 +54,7 @@ if (loginForm) {
     });
 }
 
-// SALUDO
+// SALUDO CUANDO ENTRA A REGISTRAR SUS EMOCIONES
 const saludo = document.getElementById("saludo");
 
 if (saludo) {

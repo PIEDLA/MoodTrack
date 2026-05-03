@@ -4,15 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-h6 {
-    align-items: center;
 
-}
-
-/* VARIABLES DE COLOR */
 :root {
     --morado-oscuro: #3D0066;
-    --morado-secundario: #510087;
     --morado-principal: #5C0099;
     --amarillo: #FDC500;
     --amarillo-hover: #FFD500;
@@ -26,7 +20,6 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
 header {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -38,7 +31,6 @@ header {
     flex-wrap: wrap;
 }
 
-/* LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -53,19 +45,6 @@ header {
     font-size: 24px;
 }
 
-/* MENÚ */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    position: relative;
-}
 
 /* EFECTO HOVER*/
 nav a::after {
@@ -83,7 +62,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* HERO */
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -100,7 +78,6 @@ nav a:hover::after {
     opacity: 0.9;
 }
 
-/* FORMULARIO */
 #registroForm {
     background: white;
     max-width: 420px;
@@ -130,7 +107,6 @@ nav a:hover::after {
     color: var(--morado-principal);
 }
 
-/* INPUTS */
 form {
     display: flex;
     flex-direction: column;
@@ -155,7 +131,6 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 5px rgba(92, 0, 153, 0.3);
 }
 
-/* BOTÓN */
 button {
     margin-top: 15px;
     padding: 12px;
@@ -171,13 +146,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* LISTA */
-ul li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-/* FOOTER */
 footer {
     text-align: center;
     padding: 15px;
@@ -186,9 +154,37 @@ footer {
     margin-top: 30px;
 }
 
-/* RESPONSIVE */
+.logo-hero {
+    width: 180px;
+    display: block;
+    margin: 20px auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.mostrar-menu,
+.esconder-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#check {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    header {
+
+     header {
         flex-direction: column;
         text-align: center;
     }
@@ -202,54 +198,13 @@ footer {
     .hero h2 {
         font-size: 26px;
     }
-
-    .formulario {
-        width: 90%;
-    }
-}
-
-.logo-hero {
-    width: 180px;
-    display: block;
-    margin: 20px auto;
-}
-
-
-/* MENÚ NORMAL */
-.menu {
-    display: flex;
-    list-style: none;
-}
-
-.menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-/* BOTONES */
-.mostrar-menu,
-.esconder-menu {
-    display: none;
-    cursor: pointer;
-    font-size: 25px;
-}
-
-/* OCULTAR CHECK */
-#check {
-    display: none;
-}
-
-/* 📱 RESPONSIVE */
-@media (max-width: 768px) {
-
     .menu {
         position: fixed;
         background: #5C0099;
         width: 100%;
         height: 100vh;
         top: 0;
-        right: -100%; /* oculto */
+        right: -100%; 
         flex-direction: column;
         text-align: center;
         padding-top: 50px;
@@ -260,12 +215,10 @@ footer {
         margin: 20px 0;
     }
 
-    /* MOSTRAR BOTÓN ☰ */
     .mostrar-menu {
         display: block;
     }
 
-    /* MOSTRAR X */
     .esconder-menu {
         display: block;
         position: absolute;
@@ -273,7 +226,6 @@ footer {
         right: 20px;
     }
 
-    /* CUANDO SE ACTIVA */
     #check:checked ~ .menu {
         right: 0;
     }
