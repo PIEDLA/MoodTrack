@@ -80,7 +80,8 @@ nav a:hover::after {
 
 #registroForm {
     background: white;
-    max-width: 420px;
+    max-width: 600px;
+    width: 90%;
     margin: 30px auto;
     padding: 25px;
     border-radius: 12px;
@@ -229,4 +230,82 @@ footer {
     #check:checked ~ .menu {
         right: 0;
     }
+}
+.contenedor-formularios{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.historial-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.historial-card h3{
+    color:#5C0099;
+}
+
+.botones{
+    margin-top:15px;
+    display:flex;
+    gap:10px;
+}
+
+.btn-editar{
+    background:#FDC500;
+    color:black;
+    padding:10px 15px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn-eliminar{
+    background:#d62828;
+    color:white;
+    padding:10px 15px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.mensaje{
+    width:80%;
+    max-width:500px;
+    margin:20px auto;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.success{
+    background:#d4edda;
+    color:#155724;
+}
+
+.error{
+    background:#f8d7da;
+    color:#721c24;
+}
+
+.btn-cancelar{
+    background:#6c757d;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    text-align:center;
+    margin-top:15px;
+}
+
+.btn-cancelar:hover{
+    opacity:0.9;
 }
