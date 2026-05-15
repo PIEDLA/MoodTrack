@@ -77,6 +77,17 @@
                 <h2> Registro </h2>
                 <label> Nombre </label>
                 <input type="text" name="nombre" required>
+                <label> Apellido </label>
+                <input type="text" name="apellido" required>
+                <label>Edad</label>
+                <input type="number" name="edad" min="1" required>
+                <label>Género</label> 
+                <select name="genero" required>
+                    <option value=""> Selecciona</option>
+                    <option value="Femenino"> Femenino </option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Otro"> Otro</option>
+                </select>
                 <label> Email </label>
                 <input type="email" name="email" required>
                 <label>Contraseña </label>

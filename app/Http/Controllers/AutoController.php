@@ -17,10 +17,13 @@ class AutoController extends Controller
         User::create([
 
             'name' => $request->nombre,
+            'apellido' => $request->apellido,
+            'edad' => $request->edad,
+            'genero' => $request->genero,
             'email' => $request->email,
             'password' => Hash::make($request->password)
 
-        ]);
+]);
 
         return redirect('/')->with('success', 'Usuario registrado correctamente');
 
